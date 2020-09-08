@@ -1,0 +1,52 @@
+@mixin flexCenter{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.cards{
+    @include flexCenter();
+    margin-top: auto;
+    margin-right: 5px;
+    padding: 5px;
+    width: 30%;
+    background-color: white;
+    border-radius: 5px;
+
+    .desc{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .buy{
+        button{
+            padding: 3px;
+            background-color: white;
+            border-radius: 3px;
+            border: 1px solid #FFFF26;
+
+            &:hover{
+                background-color: #FFFF26;
+                cursor: pointer;
+                border: 1px solid black;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+.image img{
+    height: 180px;
+    width: 100%;
+}

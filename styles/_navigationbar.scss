@@ -1,0 +1,78 @@
+$primaryColor: #ffea80;
+
+@mixin alignment {
+    padding: 5px;
+    margin: 3px;
+    border-radius: 7px;
+    border: 1px solid black;
+    align-self: center;
+}
+
+nav{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 3px $primaryColor;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        align-self: center;
+        li {
+            display: inline;
+            padding: 5px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .menu{
+        height: 30px;
+        width: 30px;
+        padding: 5px;
+        border: 1px solid #FFEA61;
+        margin: 5px;
+        border-radius: 5px;
+    }
+}
+
+  .login{     
+      @include alignment();
+      background-color: white;      
+      cursor: pointer;    
+      width: 100px;
+      height: 35px;
+      border: 1px solid #FFEA61;
+      &:hover{
+          background-color: $primaryColor;
+          transition: 0.5s;
+      }  
+  }
+  
+  .searchicon{
+      height: 20px;
+      align-self: center;
+  }
+
+  .cart{
+    height: 30px;
+    background-color: $primaryColor;
+    border-radius: 5px;
+    padding: 2px;
+    align-self: center;
+  }
+
+  .search{
+    padding: 5px;
+    margin: 3px;
+    align-self: center;
+    border: none;
+    box-shadow: 0px 2px $primaryColor;
+    height: 23px;
+    outline: none;
+  }
+  
+  .spacer{
+      flex-grow: 2;
+  }
